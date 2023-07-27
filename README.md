@@ -1,4 +1,4 @@
-1)	Below is the graph of with the S, E, I, R curves with the given parameters in the question. This question was relatively simple to code. There is also the incident cases plot below as well. 
+1)	Below are the graphs of with the S, E, I, R curves with the given parameters in the question.  
 
 ![Picture1](https://github.com/japnoop/MACM316_final_assignment/assets/74793032/548b7f02-d518-41d2-b1ce-7281fdbace79)
 

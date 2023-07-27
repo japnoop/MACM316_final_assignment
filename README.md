@@ -30,4 +30,5 @@ Interval	R0
 520-546	1.6
 
 The plot of the data and model are shown below. 
- 
+<img width="253" alt="Picture9" src="https://github.com/japnoop/MACM316_final_assignment/assets/74793032/f00dccfd-15b9-4d8b-a506-0f2984e746fc">
+

@@ -1,5 +1,5 @@
 1)	Below is the graph of with the S, E, I, R curves with the given parameters in the question. This question was relatively simple to code. There is also the incident cases plot below as well. 
-(https://github.com/japnoop/MACM316_final_assignment/assets/74793032/d274a488-d7a6-4125-b984-e6371627579c)
+
 
 
 2)	This question required to set different R0 values for a given time interval. This was relatively simple to implement into code. Figures 1 & 2 represent the S, E, I, R curves and the incent cases for scenario 1. Figures 3 & 4 represent the S, E, I, R curves and the incent cases for scenario 2. Figures 5 & 6 represent the S, E, I, R curves and the incent cases for scenario 3.

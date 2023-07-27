@@ -1,6 +1,8 @@
 1)	Below are the graphs of with the S, E, I, R curves with the given parameters in the question.  
 
 ![Picture1](https://github.com/japnoop/MACM316_final_assignment/assets/74793032/548b7f02-d518-41d2-b1ce-7281fdbace79)
+![Picture2](https://github.com/japnoop/MACM316_final_assignment/assets/74793032/ceab5d5b-46d2-459b-931d-a3c734e0036b)
+
 
 2)	This question required to set different R0 values for a given time interval. This was relatively simple to implement into code. Figures 1 & 2 represent the S, E, I, R curves and the incent cases for scenario 1. Figures 3 & 4 represent the S, E, I, R curves and the incent cases for scenario 2. Figures 5 & 6 represent the S, E, I, R curves and the incent cases for scenario 3.
 

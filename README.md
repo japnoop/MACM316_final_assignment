@@ -73,4 +73,191 @@ plot(1:t,CASES,'LineWidth',2)
 
 
 
+%2 A&B
+t = 180; 
 
+N = 5000000;
+gamma = 1/10;
+alpha = 1/5;
+R = 3.5;
+beta = R *gamma;
+
+S = zeros(t,1);
+I = zeros(t,1);
+R = zeros(t,1);
+E = zeros(t,1);
+
+R(1) = 0;
+I(1) = 40;
+S(1) = N - I(1) - E(1) - R(1);
+E(1) = 20 * I(1); 
+    
+    
+if i == 2:20
+    S(i) = S(i-1) - beta*I(i-1)*S(i-1)/N; 
+    E(i) = E(i-1) + beta*I(i-1)*S(i-1)/N - alpha*E(i-1);
+    I(i) = I(i-1) + alpha*E(i-1) - gamma*I(i-1);
+    R(i) = R(i-1) + gamma*I(i-1);
+    if (20<i && i<71)
+        R = 2.6;
+        beta = R *gamma;
+
+    elseif (70<i && i<85)
+        R = 1.9;
+        beta = R *gamma;
+
+    elseif (84<i && i<91)
+        R = 1.0;
+        beta = R *gamma;
+
+    elseif (90<i && i<111)
+        R = 0.55;
+        beta = R *gamma;
+
+    elseif (110<i && i<181)
+        R = 0.55;
+        beta = R *gamma;
+
+    elseif (180<i)
+        R = 0.5;
+        beta = R *gamma;
+    end
+
+end
+
+plot(1:t,S,'LineWidth',2)
+hold on
+plot(1:t,E,'LineWidth',2)
+hold on
+plot(1:t,I,'LineWidth',2)
+hold on
+plot(1:t,R,'LineWidth',2)
+grid on
+
+legend("Susceptible", "Exposed", "Infected","Removed")
+xlabel("Time")
+ylabel("Population")
+
+
+
+%3A
+T = readtable('BCCDC_COVID19_Dashboard_Case_Details.csv');
+col = T(:,1)
+a = unique(col)
+col = table2array(a)
+group = groupcounts(T,"Reported_Date")
+group = table2array(group(:,2))
+scatter(col,group)
+
+%3B
+t = 546; 
+N = 5000000;
+gamma = 1/10;
+alpha = 1/5;
+Ra = 3.5;
+beta = Ra *gamma;
+
+S = zeros(t,1);
+I = zeros(t,1);
+R = zeros(t,1);
+E = zeros(t,1);
+
+R(1) = 0;
+I(1) = 1;
+S(1) = N - I(1) - E(1) - R(1);
+E(1) = 5 * I(1); 
+for i = 2:55
+    Ra = 3;
+    beta = Ra *gamma;
+    S(i) = S(i-1) - beta*I(i-1)*S(i-1)/N; 
+    E(i) = E(i-1) + beta*I(i-1)*S(i-1)/N - alpha*E(i-1);
+    I(i) = I(i-1) + alpha*E(i-1) - gamma*I(i-1);
+    R(i) = R(i-1) + gamma*I(i-1);
+    CASES(i) = alpha*E(i-1);
+end
+for i = 56:166
+    Ra = 0.8;
+    beta = Ra *gamma;
+    S(i) = S(i-1) - beta*I(i-1)*S(i-1)/N; 
+    E(i) = E(i-1) + beta*I(i-1)*S(i-1)/N - alpha*E(i-1);
+    I(i) = I(i-1) + alpha*E(i-1) - gamma*I(i-1);
+    R(i) = R(i-1) + gamma*I(i-1);
+    CASES(i) = alpha*E(i-1);
+end
+for i = 167:215
+    Ra = 1.5;
+    beta = Ra *gamma;
+    S(i) = S(i-1) - beta*I(i-1)*S(i-1)/N; 
+    E(i) = E(i-1) + beta*I(i-1)*S(i-1)/N - alpha*E(i-1);
+    I(i) = I(i-1) + alpha*E(i-1) - gamma*I(i-1);
+    R(i) = R(i-1) + gamma*I(i-1);
+    CASES(i) = alpha*E(i-1);
+end
+for i = 216:237
+    Ra = 1.4;
+    beta = Ra *gamma;
+    S(i) = S(i-1) - beta*I(i-1)*S(i-1)/N; 
+    E(i) = E(i-1) + beta*I(i-1)*S(i-1)/N - alpha*E(i-1);
+    I(i) = I(i-1) + alpha*E(i-1) - gamma*I(i-1);
+    R(i) = R(i-1) + gamma*I(i-1);
+    CASES(i) = alpha*E(i-1);
+end
+for i = 238:289
+    Ra = 1.70;
+    beta = Ra *gamma;
+    S(i) = S(i-1) - beta*I(i-1)*S(i-1)/N; 
+    E(i) = E(i-1) + beta*I(i-1)*S(i-1)/N - alpha*E(i-1);
+    I(i) = I(i-1) + alpha*E(i-1) - gamma*I(i-1);
+    R(i) = R(i-1) + gamma*I(i-1);
+    CASES(i) = alpha*E(i-1);
+end
+for i = 290:367
+    Ra = 0.9;
+    beta = Ra *gamma;
+    S(i) = S(i-1) - beta*I(i-1)*S(i-1)/N; 
+    E(i) = E(i-1) + beta*I(i-1)*S(i-1)/N - alpha*E(i-1);
+    I(i) = I(i-1) + alpha*E(i-1) - gamma*I(i-1);
+    R(i) = R(i-1) + gamma*I(i-1);
+    CASES(i) = alpha*E(i-1);
+end
+for i = 368:433
+    Ra = 1.259;
+    beta = Ra *gamma;
+    S(i) = S(i-1) - beta*I(i-1)*S(i-1)/N; 
+    E(i) = E(i-1) + beta*I(i-1)*S(i-1)/N - alpha*E(i-1);
+    I(i) = I(i-1) + alpha*E(i-1) - gamma*I(i-1);
+    R(i) = R(i-1) + gamma*I(i-1);
+    CASES(i) = alpha*E(i-1);
+end
+for i = 434:480
+    Ra = 0.72;
+    beta = Ra *gamma;
+    S(i) = S(i-1) - beta*I(i-1)*S(i-1)/N; 
+    E(i) = E(i-1) + beta*I(i-1)*S(i-1)/N - alpha*E(i-1);
+    I(i) = I(i-1) + alpha*E(i-1) - gamma*I(i-1);
+    R(i) = R(i-1) + gamma*I(i-1);
+    CASES(i) = alpha*E(i-1);
+end
+for i = 481:520
+    Ra = 0.46;
+    beta = Ra *gamma;
+    S(i) = S(i-1) - beta*I(i-1)*S(i-1)/N; 
+    E(i) = E(i-1) + beta*I(i-1)*S(i-1)/N - alpha*E(i-1);
+    I(i) = I(i-1) + alpha*E(i-1) - gamma*I(i-1);
+    R(i) = R(i-1) + gamma*I(i-1);
+    CASES(i) = alpha*E(i-1);
+end
+for i = 521:546
+    Ra = 1.6;
+    beta = Ra *gamma;
+    S(i) = S(i-1) - beta*I(i-1)*S(i-1)/N; 
+    E(i) = E(i-1) + beta*I(i-1)*S(i-1)/N - alpha*E(i-1);
+    I(i) = I(i-1) + alpha*E(i-1) - gamma*I(i-1);
+    R(i) = R(i-1) + gamma*I(i-1);
+    CASES(i) = alpha*E(i-1);
+end
+scatter(col,group)
+hold on
+plot(1:t,CASES,'LineWidth',2)
+legend("Infected","Model")
+hold off

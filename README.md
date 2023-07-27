@@ -9,7 +9,7 @@
 ![Picture3](https://github.com/japnoop/MACM316_final_assignment/assets/74793032/b9852e3d-70e9-462d-a53b-9303a836c2a9)Figure 1 
 ![Picture4](https://github.com/japnoop/MACM316_final_assignment/assets/74793032/64ba7310-3146-4bbf-9fc3-be69925b3d8d)Figure 2
   
-![Picture5](https://github.com/japnoop/MACM316_final_assignment/assets/74793032/a7c340a6-54d5-45b4-9983-84c75e0f5666)Figure 3	Figure 4
+![Picture5](https://github.com/japnoop/MACM316_final_assignment/assets/74793032/a7c340a6-54d5-45b4-9983-84c75e0f5666)Figure 3	![Picture6](https://github.com/japnoop/MACM316_final_assignment/assets/74793032/42f6289b-2ae2-4808-86b5-fa648120b519)Figure 4
   
 Figure 5
 Figure 6

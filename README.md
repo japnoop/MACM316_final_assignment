@@ -1,4 +1,4 @@
-# MACM316_final_assignment
+# MACM316_final_assignment using Matlab
 % 1 A&B
 t = 180; 
 
